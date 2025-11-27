@@ -64,7 +64,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## CLI Tools
 
-*Your tool here! See [Contributing](#contributing).*
+- [claude-code-statusline](https://github.com/levz0r/claude-code-statusline) - A customizable statusline displaying real-time session info, token usage, and cost in Claude Code.
 
 ## Libraries & Frameworks
 
