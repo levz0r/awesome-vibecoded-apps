@@ -76,7 +76,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Browser Extensions
 
-*Your extension here! See [Contributing](#contributing).*
+- [Markdown Printer](https://github.com/levz0r/markdown-printer) - A browser extension that converts and saves web pages as formatted Markdown files.
 
 ---
 
