@@ -65,6 +65,7 @@ This list showcases real-world applications that were built using this approach.
 ## CLI Tools
 
 - [claude-code-statusline](https://github.com/levz0r/claude-code-statusline) - A customizable statusline displaying real-time session info, token usage, and cost in Claude Code.
+- [html-to-markdown-mcp](https://github.com/levz0r/html-to-markdown-mcp) - An MCP server that converts HTML content to Markdown using Turndown.js.
 
 ## Libraries & Frameworks
 
