@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
 
 ## CLI Tools
 
