@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
 
 ## CLI Tools
 
