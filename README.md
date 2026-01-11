@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
 
 ## CLI Tools
 
