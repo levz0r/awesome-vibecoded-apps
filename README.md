@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Refetch](https://refetch.io) - An open-source alternative to Hacker News for exploring tech discussions and news.
 
 ## CLI Tools
 
