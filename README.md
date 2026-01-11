@@ -41,6 +41,7 @@ This list showcases real-world applications that were built using this approach.
 ### iOS
 
 - [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
+- [Pouched](https://apps.apple.com/us/app/nicotine-pouch-tracker-pouched/id6740014859) - Track and taper nicotine pouch usage to help quit gradually.
 
 ### Android
 
@@ -61,6 +62,22 @@ This list showcases real-world applications that were built using this approach.
 ## Web Apps
 
 - [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
+- [CarbScan](https://carbscan.ai) - AI-powered carb counting app to help manage diabetes and blood glucose levels.
+- [CareerCloud](https://careercloud.io) - AI resume builder that optimizes for ATS systems and matches job descriptions.
+- [Flowbound](https://www.flowbound.app) - Psychology-based productivity app with exercises to overcome procrastination.
+- [How Many Layers](https://howmanylayersidag.se) - A minimalist weather app that tells you exactly how many clothing layers to wear.
+- [Mealmuse](https://mealmuse.ai) - AI meal planner that creates recipes from photos of your fridge or pantry.
+- [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
+- [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
+- [Nora AI](https://noratutor.xyz) - AI tutoring app with video conversations, transcriptions, and study plans.
+- [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
+- [Quicktables](https://quicktables.io) - Restaurant management platform for reservations and table management.
+- [Refetch](https://refetch.io) - An open-source alternative to Hacker News for exploring tech discussions and news.
+- [Remotely Good](https://remotelygood.co) - AI-powered job hunting website for remote work opportunities.
+- [Standup Buddy](https://standup-buddy.lovable.app) - Randomize your team's standup order with a simple click.
+- [Stories of Life](https://stories-of-life.vercel.app) - Generate personalized bedtime stories based on your child's emotions.
+- [Storypot](https://app.thestorypot.com) - Drag emojis into a pot to generate creative short stories for kids.
+- [Timeless Memories](https://timelessmemories.me) - Transform old family photos into AI-generated moving videos.
 
 ## CLI Tools
 
