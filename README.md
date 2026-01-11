@@ -97,7 +97,11 @@ This list showcases real-world applications that were built using this approach.
 
 ## Games
 
-*Your game here! See [Contributing](#contributing).*
+- [Fly](https://fly.pieter.com) - A multiplayer MMO flight sim with combat, 100% made with AI.
+- [The Great Taxi Assignment](https://great-taxi-assignment.netlify.app) - A retro 3D taxi sim that won 1st place at the 2025 Vibe Coding Game Jam.
+- [Vector Tango](https://www.vector-tango.com) - Low-poly air traffic control game with aerial combat and multiplayer.
+- [Vibe Sail](https://vibesail.com) - A relaxing multiplayer 3D sailing simulator with exploration and cargo missions.
+- [Vibeware](https://vibeware.vercel.app) - Fast-paced microgame collection where you play as a bot learning the web.
 
 ## Browser Extensions
 
