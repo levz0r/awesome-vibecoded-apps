@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [How Many Layers](https://howmanylayersidag.se) - A minimalist weather app that tells you exactly how many clothing layers to wear.
 
 ## CLI Tools
 
