@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Mealmuse](https://mealmuse.ai) - AI meal planner that creates recipes from photos of your fridge or pantry.
 
 ## CLI Tools
 
