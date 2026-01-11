@@ -40,7 +40,7 @@ This list showcases real-world applications that were built using this approach.
 
 ### iOS
 
-*Your app here! See [Contributing](#contributing).*
+- [Pouched](https://apps.apple.com/us/app/nicotine-pouch-tracker-pouched/id6740014859) - Track and taper nicotine pouch usage to help quit gradually.
 
 ### Android
 
