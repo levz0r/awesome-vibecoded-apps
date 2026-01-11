@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
 
 ## CLI Tools
 
