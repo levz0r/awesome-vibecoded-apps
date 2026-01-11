@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Flowbound](https://www.flowbound.app) - Psychology-based productivity app with exercises to overcome procrastination.
 
 ## CLI Tools
 
