@@ -60,7 +60,7 @@ This list showcases real-world applications that were built using this approach.
 
 ## Web Apps
 
-*Your app here! See [Contributing](#contributing).*
+- [Storypot](https://app.thestorypot.com) - Drag emojis into a pot to generate creative short stories for kids.
 
 ## CLI Tools
 
