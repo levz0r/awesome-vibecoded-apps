@@ -40,7 +40,7 @@ This list showcases real-world applications that were built using this approach.
 
 ### iOS
 
-*Your app here! See [Contributing](#contributing).*
+- [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
 
 ### Android
 
