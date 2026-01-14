@@ -41,6 +41,7 @@ This list showcases real-world applications that were built using this approach.
 ### iOS
 
 - [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
+- [Dog-e-dex](https://apps.apple.com/app/dog-e-dex/id6741032284) - Identify and collect dog breeds by snapping photos.
 - [Pouched](https://apps.apple.com/us/app/nicotine-pouch-tracker-pouched/id6740014859) - Track and taper nicotine pouch usage to help quit gradually.
 
 ### Android
@@ -57,7 +58,7 @@ This list showcases real-world applications that were built using this approach.
 
 ### Cross-Platform
 
-*Your app here! See [Contributing](#contributing).*
+- [Bitchat](https://github.com/permissionlesstech/bitchat) - Bluetooth mesh P2P messaging that works without internet, by Jack Dorsey.
 
 ## Web Apps
 
@@ -69,7 +70,9 @@ This list showcases real-world applications that were built using this approach.
 - [How Many Layers](https://howmanylayersidag.se) - A minimalist weather app that tells you exactly how many clothing layers to wear.
 - [JeniCards](https://jenicards.com) - Generate hyper-personalized AI greeting cards for any occasion.
 - [Lash Tracker](https://lash-map-tracker.replit.app) - Track eyelash styles and application methods with photos.
+- [LunchBox Buddy](https://joyful-froyo-b4482b.netlify.app) - AI-powered school lunch suggestions from photos of your fridge.
 - [Mealmuse](https://mealmuse.ai) - AI meal planner that creates recipes from photos of your fridge or pantry.
+- [MenuGen](https://www.menugen.app) - Upload a restaurant menu, get AI-generated images of each dish.
 - [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
 - [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
 - [Nomad List](https://nomadlist.com) - Find the best cities to live and work remotely with crowdsourced data.
