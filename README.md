@@ -41,7 +41,6 @@ This list showcases real-world applications that were built using this approach.
 
 ### iOS
 
-- [Bitchat](https://github.com/permissionlesstech/bitchat) - Peer-to-peer encrypted Bluetooth mesh messaging that works without internet, created by Jack Dorsey.
 - [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
 - [Dog-e-dex](https://apps.apple.com/app/dog-e-dex/id6741032284) - Identify and collect dog breeds by snapping photos.
 - [Poker Slam](https://apps.apple.com/app/poker-slam/id6746056702) - A puzzle-strategy card game where you create poker hands on a 5x5 grid, fully vibe-coded with Cursor.
