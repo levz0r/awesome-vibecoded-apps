@@ -113,6 +113,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 
 - [DecayBlock](https://chromewebstore.google.com/detail/decayblock/lpljcnalipecdlmafjahhdeghgdepdjg) - A productivity extension that helps you stay focused by controlling website access.
 - [Markdown Printer](https://github.com/levz0r/markdown-printer) - A browser extension that converts and saves web pages as formatted Markdown files.
+- [Zotero Link Insert](https://github.com/aditya-azad/zotero-link-insert) - Insert web links to papers from your library Zotero into any text box.
 
 ## Contributing
 
