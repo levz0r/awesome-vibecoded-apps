@@ -41,6 +41,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 ### Windows
 
 - [TCKR](https://github.com/krypdoh/TCKR) - A stock ticker app for Windows, built with Claude.
+- [Musicwall](https://apps.microsoft.com/detail/9nbkrvxhdpvw) - Organises Music, YouTube and local videos into thematic memory walls, playable on a virtual PLX-1000.
 
 ### Linux
 
