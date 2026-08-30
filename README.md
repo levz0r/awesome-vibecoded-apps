@@ -55,6 +55,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 
 - [Aldi Prices](https://github.com/jimlawruk/aldi-prices) - Track Aldi grocery product prices over time, all code by Copilot agent.
 - [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
+- [bidboard.games](https://bidboard.games) - A pay-to-rank leaderboard for game sites, ranked by how much each has paid.
 - [CarbScan](https://carbscan.ai) - AI-powered carb counting app to help manage diabetes and blood glucose levels.
 - [CareerCloud](https://careercloud.io) - AI resume builder that optimizes for ATS systems and matches job descriptions.
 - [ChatIQ](https://www.chatiq.ai) - AI-powered customer support chatbot and ticketing system trained on your company data.
