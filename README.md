@@ -72,6 +72,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 - [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
 - [MPLS Coffee](https://mplscoffee.com) - All coffee shops in Minnesota, entirely vibe-coded with Claude Code.
 - [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
+- [NextReset](https://nextreset.ai/) - Tracks observed Codex reset history and official incident sources.
 - [NanoBananaEditor](https://github.com/markfulton/NanoBananaEditor) - Advanced AI image generator and editor powered by Gemini 2.5 Flash.
 - [Nora AI](https://noratutor.xyz) - AI tutoring app with video conversations, transcriptions, and study plans.
 - [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
