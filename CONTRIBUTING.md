@@ -33,7 +33,7 @@ Your submission should:
    - [Project Name](link) - A short description ending with a period.
    ```
 4. Keep descriptions concise (under 100 characters if possible)
-5. Add new entries at the bottom of the relevant category
+5. Keep entries in alphabetical order (case-insensitive) within the relevant category. In **Apps**, entries are grouped by platform (macOS, iOS, Android, Windows, Linux), so add yours alphabetically within its platform group
 6. Submit a Pull Request
 
 #### Examples

@@ -56,6 +56,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 - [Aldi Prices](https://github.com/jimlawruk/aldi-prices) - Track Aldi grocery product prices over time, all code by Copilot agent.
 - [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
 - [bidboard.games](https://bidboard.games) - A pay-to-rank leaderboard for game sites, ranked by how much each has paid.
+- [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
 - [CarbScan](https://carbscan.ai) - AI-powered carb counting app to help manage diabetes and blood glucose levels.
 - [CareerCloud](https://careercloud.io) - AI resume builder that optimizes for ATS systems and matches job descriptions.
 - [ChatIQ](https://www.chatiq.ai) - AI-powered customer support chatbot and ticketing system trained on your company data.
@@ -72,8 +73,8 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 - [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
 - [MPLS Coffee](https://mplscoffee.com) - All coffee shops in Minnesota, entirely vibe-coded with Claude Code.
 - [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
-- [NextReset](https://nextreset.ai/) - Tracks observed Codex reset history and official incident sources.
 - [NanoBananaEditor](https://github.com/markfulton/NanoBananaEditor) - Advanced AI image generator and editor powered by Gemini 2.5 Flash.
+- [NextReset](https://nextreset.ai/) - Tracks observed Codex reset history and official incident sources.
 - [Nora AI](https://noratutor.xyz) - AI tutoring app with video conversations, transcriptions, and study plans.
 - [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
 - [Plinq](https://plinq.com.br) - A women's safety platform providing instant access to public criminal records to help prevent violence.
@@ -87,7 +88,6 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 - [Time Tracker](https://time.wisdemic.com) - Simple and clean time tracking for productivity.
 - [Timeless Memories](https://timelessmemories.me) - Transform old family photos into AI-generated moving videos.
 - [TrendFeed](https://www.trendfeed.app) - AI platform that turns trending news into short-form video content.
-- [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
 
 ## CLI Tools
 
