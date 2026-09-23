@@ -86,6 +86,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 - [Time Tracker](https://time.wisdemic.com) - Simple and clean time tracking for productivity.
 - [Timeless Memories](https://timelessmemories.me) - Transform old family photos into AI-generated moving videos.
 - [TrendFeed](https://www.trendfeed.app) - AI platform that turns trending news into short-form video content.
+- [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
 
 ## CLI Tools
 
