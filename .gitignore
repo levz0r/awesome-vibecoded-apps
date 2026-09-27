@@ -2,3 +2,8 @@
 *.swp
 *.swo
 *~
+
+# Site build output and local design review files
+_site/
+site/.impeccable/*
+!site/.impeccable/design.json
