@@ -1,0 +1,144 @@
+/* vibecodedapps.dev: the Show List. One text size, one committed band colour. */
+
+:root {
+  --ground: #f3f2ee;
+  --ink: #1b1b19;
+  --meta: #62625b;
+  --visited: #66665f;
+  --rule: #dcdad3;
+  --band: #3a33d6;
+  --band-ink: #ffffff;
+  --band-meta: #d9d7ff;
+  --glyph: #3a33d6;
+  --live: #2c7a4b;
+  --failing: #b0391f;
+  --select: #d8d6ff;
+  --focus: #3a33d6;
+  --size: 15px;
+  --leading: 1.5;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #141416;
+    --ink: #e9e8e3;
+    --meta: #a2a29a;
+    --visited: #8c8c85;
+    --rule: #2c2c30;
+    --band: #3a33d6;
+    --band-meta: #d9d7ff;
+    --glyph: #a19dff;
+    --live: #6cc995;
+    --failing: #ff8a6b;
+    --select: #3a33d6;
+    --focus: #a19dff;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  font: var(--size)/var(--leading) Verdana, Geneva, "DejaVu Sans", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--rule) var(--ground);
+}
+
+body { margin: 0; }
+
+::selection { background: var(--select); color: var(--ink); }
+
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  padding: 6px 10px;
+  background: var(--ground);
+  z-index: 1;
+}
+.skip:focus { top: 8px; }
+
+/* The band: one saturated colour, full strength, no gradient. */
+.band { background: var(--band); color: var(--band-ink); }
+
+.band__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 12px;
+}
+
+.band a { color: var(--band-meta); text-decoration: none; }
+.band a:hover, .band a[aria-current="page"] { color: var(--band-ink); text-decoration: underline; }
+.band a:focus-visible { outline-color: var(--band-ink); }
+.band .home { color: var(--band-ink); font-weight: bold; margin-right: 10px; display: inline-flex; align-items: center; gap: 6px; }
+.band .home .glyph { fill: var(--band-ink); align-self: center; }
+.band .cats { display: contents; }
+.band .actions { margin-left: auto; display: inline-flex; gap: 14px; }
+.band .submit { color: var(--band-ink); font-weight: bold; text-decoration: underline; }
+
+/* The sheet */
+.sheet { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+h1 {
+  font-size: var(--size);
+  font-weight: bold;
+  margin: 22px 0 2px;
+}
+
+.lede { margin: 0 0 14px; color: var(--meta); }
+
+/* The list: rank is position, never size. */
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+
+.entry {
+  display: grid;
+  grid-template-columns: 2.6em 15px 1fr;
+  column-gap: 10px;
+  padding: 7px 0 6px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 12px;
+}
+.entry:target { background: var(--select); }
+
+.n { color: var(--meta); text-align: right; font-variant-numeric: tabular-nums; }
+
+.glyph { fill: var(--glyph); margin-top: 0.22em; }
+
+.body p { margin: 0; }
+.title a { text-decoration: none; font-weight: bold; }
+.title a:hover { text-decoration: underline; }
+.title a:visited { color: var(--visited); }
+.domain { color: var(--meta); overflow-wrap: anywhere; }
+.title { max-width: 110ch; }
+.desc { font-weight: normal; }
+.meta { color: var(--meta); }
+.meta a { color: var(--meta); }
+.meta a:hover { color: var(--ink); }
+.sep { padding: 0 4px; }
+
+.status { display: inline-flex; align-items: center; gap: 4px; }
+.mark { fill: none; stroke: var(--live); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.status--failing { color: var(--failing); }
+.mark--failing { stroke: var(--failing); stroke-width: 1.5; }
+
+/* Footer */
+.foot { color: var(--meta); padding-top: 18px; padding-bottom: 40px; }
+.foot p { max-width: 72ch; margin: 0 0 10px; }
+.foot a { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .entry { grid-template-columns: 2em 15px 1fr; column-gap: 8px; }
+  .band__inner { gap: 2px 9px; padding: 6px 12px; }
+  .band .home { order: -2; margin-right: auto; }
+  .band .actions { order: -1; }
+}
