@@ -31,7 +31,6 @@ Every link is checked automatically each week, and broken entries are fixed or r
 
 - [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
 - [Dog-e-dex](https://apps.apple.com/app/dog-e-dex/id6741032284) - Identify and collect dog breeds by snapping photos.
-- [Poker Slam](https://apps.apple.com/app/poker-slam/id6746056702) - A puzzle-strategy card game where you create poker hands on a 5x5 grid, fully vibe-coded with Cursor.
 - [Pouched](https://apps.apple.com/us/app/nicotine-pouch-tracker-pouched/id6740014859) - Track and taper nicotine pouch usage to help quit gradually.
 
 ### Android
@@ -43,7 +42,6 @@ Every link is checked automatically each week, and broken entries are fixed or r
 ### Windows
 
 - [Musicwall](https://apps.microsoft.com/detail/9nbkrvxhdpvw) - Organises Music, YouTube and local videos into thematic memory walls, playable on a virtual PLX-1000.
-- [TCKR](https://github.com/krypdoh/TCKR) - A stock ticker app for Windows, built with Claude.
 
 ### Linux
 
@@ -60,20 +58,14 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [bidboard.games](https://bidboard.games) - A pay-to-rank leaderboard for game sites, ranked by how much each has paid.
 - [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
 - [CarbScan](https://carbscan.ai) - AI-powered carb counting app to help manage diabetes and blood glucose levels.
-- [CareerCloud](https://careercloud.io) - AI resume builder that optimizes for ATS systems and matches job descriptions.
-- [ChatIQ](https://www.chatiq.ai) - AI-powered customer support chatbot and ticketing system trained on your company data.
 - [CourtSync Calendar](https://www.courtsynccalendar.com) - Extract court dates and deadlines from PDF scheduling orders into calendar files.
-- [DrawCraft](https://drawcraft.io) - AI-powered drawing generation tool with adjustable difficulty levels.
 - [DummyForms](https://dummyforms.com) - No-code form builder with drag-and-drop and AI form generation, won Lovable hackathon.
 - [Flowbound](https://www.flowbound.app) - Psychology-based productivity app with exercises to overcome procrastination.
-- [How Many Layers](https://howmanylayersidag.se) - A minimalist weather app that tells you exactly how many clothing layers to wear.
-- [JeniCards](https://jenicards.com) - Generate hyper-personalized AI greeting cards for any occasion.
 - [Lash Tracker](https://lash-map-tracker.replit.app) - Track eyelash styles and application methods with photos.
 - [LunchBox Buddy](https://joyful-froyo-b4482b.netlify.app) - AI-powered school lunch suggestions from photos of your fridge.
 - [Mealmuse](https://mealmuse.ai) - AI meal planner that creates recipes from photos of your fridge or pantry.
 - [MenuGen](https://www.menugen.app) - Take a photo of a restaurant menu and get AI-generated images for every dish, built by Andrej Karpathy.
 - [Mixcard](https://mixcard.me) - Turn Spotify playlists into printable vintage-style postcards with QR codes.
-- [MPLS Coffee](https://mplscoffee.com) - All coffee shops in Minnesota, entirely vibe-coded with Claude Code.
 - [My Baby Logger](https://mybabylogger.com) - Track feedings, sleep, diapers, and medications for newborns.
 - [NanoBananaEditor](https://github.com/markfulton/NanoBananaEditor) - Advanced AI image generator and editor powered by Gemini 2.5 Flash.
 - [NextReset](https://nextreset.ai/) - Tracks observed Codex reset history and official incident sources.
@@ -81,14 +73,10 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
 - [Plinq](https://plinq.com.br) - A women's safety platform providing instant access to public criminal records to help prevent violence.
 - [PrintPigeon](https://printpigeon.co.uk) - Upload a PDF, enter an address, and have it printed and mailed, built in 3 days with Lovable.
-- [Quicktables](https://quicktables.io) - Restaurant management platform for reservations and table management.
 - [Refetch](https://refetch.io) - An open-source alternative to Hacker News for exploring tech discussions and news.
-- [Remotely Good](https://remotelygood.co) - AI-powered job hunting website for remote work opportunities.
 - [Standup Buddy](https://standup-buddy.lovable.app) - Randomize your team's standup order with a simple click.
 - [Stories of Life](https://stories-of-life.vercel.app) - Generate personalized bedtime stories based on your child's emotions.
-- [Storypot](https://app.thestorypot.com) - Drag emojis into a pot to generate creative short stories for kids.
 - [Time Tracker](https://time.wisdemic.com) - Simple and clean time tracking for productivity.
-- [Timeless Memories](https://timelessmemories.me) - Transform old family photos into AI-generated moving videos.
 - [TrendFeed](https://www.trendfeed.app) - AI platform that turns trending news into short-form video content.
 
 ## CLI Tools
