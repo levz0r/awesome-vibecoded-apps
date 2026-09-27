@@ -78,6 +78,7 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [Stories of Life](https://stories-of-life.vercel.app) - Generate personalized bedtime stories based on your child's emotions.
 - [Time Tracker](https://time.wisdemic.com) - Simple and clean time tracking for productivity.
 - [TrendFeed](https://www.trendfeed.app) - AI platform that turns trending news into short-form video content.
+- [vibecodedapps.dev](https://vibecodedapps.dev) - A browsable index of this list with one page per category, built with Claude Code.
 
 ## CLI Tools
 
