@@ -25,3 +25,6 @@ jobs:
 
       - name: Check alphabetical order
         run: python3 .github/scripts/check-order.py README.md
+
+      - name: Build site
+        run: python3 site/build.py --out "$RUNNER_TEMP/_site"
