@@ -6,18 +6,23 @@ Thank you for your interest in contributing to Awesome Vibecoded Apps!
 
 This list is for **apps and projects that were built using vibe coding** - AI-assisted development where you collaborated with tools like Claude, ChatGPT, Cursor, GitHub Copilot, or similar AI coding assistants.
 
-### Requirements
+### Inclusion Criteria
 
-Your submission should:
+Every entry must meet **all** of these. Pull requests that don't are closed, and existing entries that stop meeting them are removed.
 
-- Be a working, publicly available project (open source preferred, but not required)
-- Have been substantially built using AI assistance (vibe coding)
-- Have a clear description of what it does
-- Be something you built or have permission to submit
+1. **Live for at least 30 days.** The project has been publicly available for at least 30 days when you submit (first public release, store listing, or first deploy).
+2. **Works without special access.** The link loads and the main feature can be tried: no "coming soon" pages, waitlist-only access, or sign-up walls with nothing to try first. Paid apps are fine if the store listing or site shows what they do.
+3. **AI involvement is stated publicly.** A README, blog post, video, launch post, or store description says the project was built with AI tools and names them. Link it in your pull request; a claim made only in the pull request isn't enough.
+4. **Substantially built with AI.** Most of the code was produced through AI-assisted development, not just fixes, tests, or documentation.
+5. **Used by someone besides the author.** At least one of: a public repo with stars or forks from others, a store listing with ratings or reviews, a launch post with discussion (Hacker News, Reddit, Product Hunt, and so on), or coverage by someone else.
+6. **You built it or have permission to submit it.**
+
+Links are checked automatically every week. An entry whose link is broken is removed, and can be re-added once it works again.
 
 ### What We're NOT Looking For
 
 - AI coding tools themselves (those belong in [awesome-vibe-coding](https://github.com/filipecalegario/awesome-vibe-coding))
+- Templates, boilerplates, starter kits, and tutorial or course projects
 - Projects that only used AI for minor fixes or documentation
 - Abandoned or broken projects
 - Duplicate entries
@@ -63,8 +68,11 @@ Add Project Name
 
 - **One project per PR** - Submit separate PRs if you have multiple projects
 - **PR title format** - Use `Add YourProjectName` (e.g., `Add ASCIIKeyboard`, `Add DataViz Tool`)
-- **PR description** - Briefly mention:
+- **PR description** - Include:
   - What AI tools you used (Claude, GPT, Cursor, etc.)
+  - A link to where the AI involvement is stated publicly (criterion 3)
+  - When the project went live (criterion 1)
+  - A link showing use by others (criterion 5)
   - Optionally: a sentence about your vibe coding experience
 
 ### Suggesting New Categories
