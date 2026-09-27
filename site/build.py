@@ -27,6 +27,7 @@ HERE = Path(__file__).resolve().parent
 
 ENTRY = re.compile(r"^- \[(?P<name>[^\]]+)\]\((?P<url>[^)]+)\) - (?P<desc>.+)$")
 SKIP_SECTIONS = {"Contents", "Footnotes", "Contributing"}
+SAFE_URL = re.compile(r"^https?://[^\s\"'<>`]+$")
 
 # Category pages, in nav order. `plural` reads naturally after "Vibe-coded".
 CATEGORIES = {
@@ -64,9 +65,13 @@ def parse_readme(text):
                 intro.append(line.strip())
         elif section == "Footnotes" and line.strip():
             footnote = line.strip()
-        elif section and section not in SKIP_SECTIONS and (m := ENTRY.match(line)):
+        elif section and section not in SKIP_SECTIONS and line.startswith("- ["):
+            if not (m := ENTRY.match(line)):
+                raise SystemExit(f"Can't parse README entry: {line!r}")
             if section not in CATEGORIES:
                 raise SystemExit(f"README section '{section}' has no page mapping in site/build.py")
+            if not SAFE_URL.match(m["url"]):
+                raise SystemExit(f"README entry '{m['name']}' has a non-http(s) link: {m['url']!r}")
             entries.append({**m.groupdict(), "category": section})
     return intro, footnote, entries
 
@@ -134,8 +139,24 @@ def e(text):
 
 
 def inline_md(text):
-    """Escape, then render [text](url) links from the README prose."""
-    return re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', e(text))
+    """Render [text](url) links from the README prose; only http(s) and relative links become anchors."""
+    out, last = [], 0
+    for m in re.finditer(r"\[([^\]]+)\]\(([^)\s]+)\)", text):
+        out.append(e(text[last:m.start()]))
+        label, url = m.groups()
+        if SAFE_URL.match(url) or re.match(r"^[A-Za-z0-9_./#-]+$", url) and not url.startswith("//"):
+            out.append(f'<a href="{e(url)}">{e(label)}</a>')
+        else:
+            out.append(e(label))
+        last = m.end()
+    out.append(e(text[last:]))
+    return "".join(out)
+
+
+def json_ld(data):
+    """JSON for a <script> block: escape characters that could close the tag or start markup."""
+    return (json.dumps(data, ensure_ascii=False)
+            .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
 
 
 def row(n, entry, failing, show_category):
@@ -200,7 +221,7 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 <meta name="theme-color" content="#3a33d6">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json_ld(ld)}</script>
 </head>
 <body>
 <!--
