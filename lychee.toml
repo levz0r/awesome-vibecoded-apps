@@ -1,0 +1,15 @@
+# Link checker config, see https://lychee.cli.rs/guides/config/
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+max_concurrency = 8
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
+
+# Many live sites answer bots with 403 (Cloudflare) or 429 (rate limits);
+# only treat real failures (404, 5xx, DNS, timeouts) as broken.
+accept = ["200..=299", "403", "429"]
+
+# Sites that block automated checks entirely.
+exclude = [
+  "^https://(x|twitter)\\.com/",
+]
