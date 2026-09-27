@@ -7,3 +7,4 @@
 _site/
 site/.impeccable/*
 !site/.impeccable/design.json
+__pycache__/
