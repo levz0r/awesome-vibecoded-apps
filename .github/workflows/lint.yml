@@ -1,0 +1,27 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # awesome-lint checks the git history
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: awesome-lint
+        run: npx --yes awesome-lint@2.3.0
+
+      - name: Check alphabetical order
+        run: python3 .github/scripts/check-order.py README.md

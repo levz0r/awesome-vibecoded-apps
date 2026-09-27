@@ -74,7 +74,7 @@ If your project doesn't fit existing categories, feel free to suggest a new one 
 ## Quality Standards
 
 - Check your spelling and grammar
-- Ensure links are working
+- Ensure links are working (an automated link check runs on every PR that changes `README.md`)
 - No trailing whitespace
 - Descriptions should be meaningful, not marketing fluff
 
