@@ -85,12 +85,13 @@ def render(card):
     draw.text((MARGIN, y + 14), card["subline"], font=font("regular", 32), fill=META)
 
     # Sample apps: two columns of glyph + name under a hairline, like the list itself.
-    top = 452
+    # Kept above the bottom ~85px, where X overlays the page title on large cards.
+    top = 424
     draw.rectangle([MARGIN, top, W - MARGIN, top + 1], fill=RULE)
     name_face, col_w = font("bold", 30), (W - 2 * MARGIN) // 2
     for i, name in enumerate(card["apps"]):
         x = MARGIN + (i % 2) * col_w
-        row_y = top + 34 + (i // 2) * 64
+        row_y = top + 30 + (i // 2) * 60
         draw_glyph(draw, name, x, row_y, 6, BAND)
         draw.text((x + 48, row_y + 15), fit(draw, name, name_face, col_w - 72), font=name_face, fill=INK, anchor="lm")
     return img

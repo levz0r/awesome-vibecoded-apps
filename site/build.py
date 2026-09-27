@@ -249,8 +249,8 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(description)}">
-<meta name="twitter:image" content="{SITE}/og/{og["stem"]}.png">
 <meta name="twitter:image:alt" content="{e(og["alt"])}">
+<meta name="twitter:image" content="{SITE}/og/{og["stem"]}.png">
 <meta name="theme-color" content="#3a33d6">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
