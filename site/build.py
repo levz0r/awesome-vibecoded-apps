@@ -251,6 +251,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <footer class="sheet foot">
   {FOOTER}
 </footer>
+<script>
+  // On narrow screens the category row scrolls; bring the current page's link into view.
+  (function () {{
+    var a = document.querySelector(".cats [aria-current]");
+    if (a && a.parentNode.scrollWidth > a.parentNode.clientWidth) a.parentNode.scrollLeft = a.offsetLeft - 16;
+  }})();
+</script>
 </body>
 </html>
 """
