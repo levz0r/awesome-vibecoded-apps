@@ -141,4 +141,17 @@ h1 {
   .band__inner { gap: 2px 9px; padding: 6px 12px; }
   .band .home { order: -2; margin-right: auto; }
   .band .actions { order: -1; }
+  /* Categories become one scrollable row instead of wrapping onto three lines. */
+  .band .cats {
+    display: flex;
+    flex-basis: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    padding: 2px 28px 4px 0;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+  }
+  .band .cats::-webkit-scrollbar { display: none; }
 }
