@@ -54,6 +54,7 @@ Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](h
 ## Web Apps
 
 - [Aldi Prices](https://github.com/jimlawruk/aldi-prices) - Track Aldi grocery product prices over time, all code by Copilot agent.
+- [Babel Life](https://babel-life.netlify.app) - Library of Babel as 81 lives, built with Claude.
 - [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
 - [bidboard.games](https://bidboard.games) - A pay-to-rank leaderboard for game sites, ranked by how much each has paid.
 - [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
