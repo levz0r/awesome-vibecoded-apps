@@ -49,3 +49,27 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  indexnow:
+    # Tell Bing, Yandex and other IndexNow engines the pages changed. Skipped for the
+    # weekly link-check rebuild, which usually changes nothing but the check date.
+    needs: deploy
+    if: github.event_name != 'workflow_run'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Submit URLs to IndexNow
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          src = open("site/build.py").read()
+          key = re.search(r'INDEXNOW_KEY = "([0-9a-f]+)"', src).group(1)
+          sitemap = urllib.request.urlopen("https://vibecodedapps.dev/sitemap.xml", timeout=30).read().decode()
+          urls = re.findall(r"<loc>([^<]+)</loc>", sitemap)
+          body = json.dumps({"host": "vibecodedapps.dev", "key": key,
+                             "keyLocation": f"https://vibecodedapps.dev/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              print(f"IndexNow: HTTP {resp.status} for {len(urls)} URLs")
+          PY

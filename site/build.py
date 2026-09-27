@@ -22,6 +22,8 @@ SITE = "https://vibecodedapps.dev"
 REPO = "levz0r/awesome-vibecoded-apps"
 REPO_URL = f"https://github.com/{REPO}"
 SUBMIT_URL = f"{REPO_URL}/blob/main/CONTRIBUTING.md"
+# IndexNow key (public by design): proves to Bing, Yandex and others that we own the host.
+INDEXNOW_KEY = "3876ea70be456526d9d8a4cbde156d5c"
 ROOT = Path(__file__).resolve().parent.parent
 HERE = Path(__file__).resolve().parent
 
@@ -322,6 +324,7 @@ def main():
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     (out / "CNAME").write_text("vibecodedapps.dev\n")
+    (out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY)
     (out / ".nojekyll").write_text("")
     for asset in ("style.css", "og.png"):
         shutil.copy(HERE / asset, out / asset)
