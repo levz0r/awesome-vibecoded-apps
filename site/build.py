@@ -1,6 +1,7 @@
 """Build vibecodedapps.dev from README.md.
 
 Usage: python3 site/build.py [--out _site]
+Preview images are rendered separately by site/og.py (needs Pillow).
 
 Standard library only. When GITHUB_TOKEN and GITHUB_REPOSITORY are set (in
 GitHub Actions), it also reads the date of the last link check on main and any
@@ -106,17 +107,17 @@ def link_status():
     return checked, failing
 
 
+def glyph_cells(name):
+    """The (x, y) cells of a 5x5 mirrored mark derived from the name."""
+    bits = int(hashlib.sha1(name.lower().encode()).hexdigest(), 16)
+    cells = sorted({(x, row) for row in range(5) for col in range(3)
+                    if bits >> (row * 3 + col) & 1 for x in (col, 4 - col)})
+    return cells or [(2, 2)]
+
+
 def glyph(name, size=15):
     """A 5x5 mirrored mark derived from the name, so rows stay recognizable without screenshots."""
-    bits = int(hashlib.sha1(name.lower().encode()).hexdigest(), 16)
-    cells = []
-    for row in range(5):
-        for col in range(3):
-            if bits >> (row * 3 + col) & 1:
-                for x in {col, 4 - col}:
-                    cells.append(f'<rect x="{x}" y="{row}" width="1" height="1"/>')
-    if not cells:
-        cells.append('<rect x="2" y="2" width="1" height="1"/>')
+    cells = [f'<rect x="{x}" y="{y}" width="1" height="1"/>' for x, y in glyph_cells(name)]
     return (f'<svg class="glyph" viewBox="0 0 5 5" width="{size}" height="{size}" '
             f'aria-hidden="true" shape-rendering="crispEdges">{"".join(cells)}</svg>')
 
@@ -180,7 +181,29 @@ def row(n, entry, failing, show_category):
       </li>"""
 
 
-def page(*, path, title, description, heading, lede, entries, failing, current, show_category, extra_ld=None):
+# Well-known entries shown first on preview images, when present on that page.
+FEATURED = ["Bitchat", "MenuGen", "Fly", "Refetch"]
+
+
+def og_cards(entries):
+    """One social preview card per page: file stem, heading, subline, sample app names and alt text."""
+    def card(stem, heading, n, apps):
+        subline = f"{n} real example{'s' if n != 1 else ''}, every link checked weekly"
+        return {"stem": stem, "heading": heading, "subline": subline, "apps": apps[:4],
+                "alt": f"{heading}: {subline}. Includes {', '.join(apps[:4])}."}
+
+    def featured_first(names):
+        return [n for n in FEATURED if n in names] + [n for n in sorted(names, key=str.lower) if n not in FEATURED]
+
+    cards = [card("index", "Real apps built with vibe coding", len(entries), featured_first([x["name"] for x in entries]))]
+    for category, (slug, _, plural) in CATEGORIES.items():
+        members = [x["name"] for x in entries if x["category"] == category]
+        if members:
+            cards.append(card(slug, f"Vibe-coded {plural}", len(members), featured_first(members)))
+    return cards
+
+
+def page(*, path, title, description, heading, lede, entries, failing, current, show_category, og, extra_ld=None):
     canonical = f"{SITE}{path}"
     nav = "\n".join(
         f'<a href="/{slug}/"{" aria-current=\"page\"" if slug == current else ""}>{short}</a>'
@@ -218,8 +241,16 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(description)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}/og.png">
+<meta property="og:image" content="{SITE}/og/{og["stem"]}.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(og["alt"])}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(description)}">
+<meta name="twitter:image" content="{SITE}/og/{og["stem"]}.png">
+<meta name="twitter:image:alt" content="{e(og["alt"])}">
 <meta name="theme-color" content="#3a33d6">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
@@ -287,6 +318,7 @@ def main():
     out.mkdir(parents=True)
 
     everything = sorted(entries, key=lambda x: x["name"].lower())
+    cards = {c["stem"]: c for c in og_cards(entries)}
     pages = [("/", 1.0)]
     (out / "index.html").write_text(page(
         path="/",
@@ -296,7 +328,7 @@ def main():
         heading="Real apps built with vibe coding",
         lede=(f"{len(entries)} apps built by describing them to an AI. "
               f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note})."),
-        entries=everything, failing=failing, current="", show_category=True,
+        entries=everything, failing=failing, current="", show_category=True, og=cards["index"],
     ), encoding="utf-8")
 
     for category, (slug, _, plural) in CATEGORIES.items():
@@ -314,14 +346,14 @@ def main():
                          f"{' and more' if n > 4 else ''}."),
             heading=f"Vibe-coded {plural}",
             lede=f"{n} {noun} built with AI. Links checked {check_note}.",
-            entries=members, failing=failing, current=slug, show_category=False,
+            entries=members, failing=failing, current=slug, show_category=False, og=cards[slug],
         ), encoding="utf-8")
         pages.append((f"/{slug}/", 0.8))
 
     (out / "404.html").write_text(page(
         path="/404.html", title="Not found | vibecodedapps.dev", description="This page does not exist.",
         heading="That page doesn't exist", lede='It may have been removed with a dead entry. <a href="/">See every app</a>.',
-        entries=[], failing=failing, current=None, show_category=True,
+        entries=[], failing=failing, current=None, show_category=True, og=cards["index"],
     ).replace('<link rel="canonical" href="https://vibecodedapps.dev/404.html">', '<meta name="robots" content="noindex">'),
         encoding="utf-8")
 
@@ -333,8 +365,7 @@ def main():
     (out / "CNAME").write_text("vibecodedapps.dev\n")
     (out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY)
     (out / ".nojekyll").write_text("")
-    for asset in ("style.css", "og.png"):
-        shutil.copy(HERE / asset, out / asset)
+    shutil.copy(HERE / "style.css", out / "style.css")
     (out / "favicon.svg").write_text(
         glyph("vibecodedapps.dev", 32).replace('class="glyph"', 'xmlns="http://www.w3.org/2000/svg" fill="#3a33d6"'))
 

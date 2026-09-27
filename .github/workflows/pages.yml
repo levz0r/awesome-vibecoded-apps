@@ -36,6 +36,16 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 site/build.py --out _site
 
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Render social preview images
+        run: |
+          fc-list | grep -q DejaVuSans-Bold || (sudo apt-get update -q && sudo apt-get install -y -q fonts-dejavu-core)
+          python -m pip install --quiet pillow==12.3.0
+          python site/og.py --out _site
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
