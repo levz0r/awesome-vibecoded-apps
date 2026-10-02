@@ -24,6 +24,7 @@ REPO = "levz0r/awesome-vibecoded-apps"
 REPO_URL = f"https://github.com/{REPO}"
 SUBMIT_URL = f"{REPO_URL}/blob/main/CONTRIBUTING.md"
 # IndexNow key (public by design): proves to Bing, Yandex and others that we own the host.
+GOATCOUNTER = "https://levz0r-vibecodedapps.goatcounter.com/count"
 INDEXNOW_KEY = "3876ea70be456526d9d8a4cbde156d5c"
 ROOT = Path(__file__).resolve().parent.parent
 HERE = Path(__file__).resolve().parent
@@ -164,6 +165,7 @@ def json_ld(data):
 
 def row(n, entry, failing, show_category):
     slug, _, plural = CATEGORIES[entry["category"]]
+    anchor = re.sub(r'[^a-z0-9]+', '-', entry['name'].lower()).strip('-')
     is_failing = entry["url"].rstrip("/") in failing
     status = (f'<span class="status status--failing">{FAILING_MARK}link failing, under review</span>'
               if is_failing else f'<span class="status">{LIVE_MARK}live</span>')
@@ -171,11 +173,11 @@ def row(n, entry, failing, show_category):
     if show_category:
         meta.insert(0, f'<a href="/{slug}/">{e(plural)}</a>')
     return f"""
-      <li class="entry" id="{e(re.sub(r'[^a-z0-9]+', '-', entry['name'].lower()).strip('-'))}">
+      <li class="entry" id="{e(anchor)}">
         <span class="n">{n}.</span>
         {glyph(entry["name"])}
         <div class="body">
-          <p class="title"><a href="{e(entry["url"])}" rel="noopener">{e(entry["name"])}</a> <span class="domain">({e(domain(entry["url"]))})</span> <span class="desc">{e(entry["desc"])}</span></p>
+          <p class="title"><a href="{e(entry["url"])}" rel="noopener" data-goatcounter-click="app/{e(anchor)}" data-goatcounter-title="{e(entry["name"])}">{e(entry["name"])}</a> <span class="domain">({e(domain(entry["url"]))})</span> <span class="desc">{e(entry["desc"])}</span></p>
           <p class="meta">{' <span class="sep" aria-hidden="true">·</span> '.join(meta)}</p>
         </div>
       </li>"""
@@ -289,6 +291,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     if (a && a.parentNode.scrollWidth > a.parentNode.clientWidth) a.parentNode.scrollLeft = a.offsetLeft - 16;
   }})();
 </script>
+<script data-goatcounter="{GOATCOUNTER}" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
 """
