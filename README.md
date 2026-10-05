@@ -29,7 +29,6 @@ Every link is checked automatically each week, and broken entries are fixed or r
 
 ### iOS
 
-- [Chores AI](https://www.chores-ai.com) - AI-powered chore management app that verifies task completion with photos.
 - [Dog-e-dex](https://apps.apple.com/app/dog-e-dex/id6741032284) - Identify and collect dog breeds by snapping photos.
 - [Pouched](https://apps.apple.com/us/app/nicotine-pouch-tracker-pouched/id6740014859) - Track and taper nicotine pouch usage to help quit gradually.
 
