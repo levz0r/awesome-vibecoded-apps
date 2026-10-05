@@ -256,6 +256,7 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 <meta name="theme-color" content="#3a33d6">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/json" href="/apps.json" title="All apps as JSON">
 <script type="application/ld+json">{json_ld(ld)}</script>
 </head>
 <body>
@@ -298,6 +299,59 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 
 FOOTER = ""  # filled in main() from the README
+
+
+AGENTS_URL = f"{REPO_URL}/blob/main/CONTRIBUTING.md#for-ai-agents"
+
+
+def write_machine_readable(out, entries, failing, checked):
+    """apps.json (the whole list as data) and llms.txt (a map of the site for AI agents)."""
+    counts = {c: sum(1 for x in entries if x["category"] == c) for c in CATEGORIES}
+    apps = [{
+        "name": x["name"],
+        "url": x["url"],
+        "description": x["desc"],
+        "category": CATEGORIES[x["category"]][2],
+        "category_url": f"{SITE}/{CATEGORIES[x['category']][0]}/",
+        "link_status": "failing" if x["url"].rstrip("/") in failing else "live",
+    } for x in sorted(entries, key=lambda x: x["name"].lower())]
+    data = {
+        "name": "Awesome Vibecoded Apps",
+        "description": "Curated list of real, live apps built with vibe coding (AI-assisted development).",
+        "site": SITE + "/",
+        "source": REPO_URL,
+        "submit": SUBMIT_URL,
+        "links_checked": checked.isoformat() if checked else None,
+        "count": len(apps),
+        "apps": apps,
+    }
+    (out / "apps.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    categories = "\n".join(
+        f"- [Vibe-coded {plural}]({SITE}/{slug}/): {counts[c]} {'entry' if counts[c] == 1 else 'entries'}"
+        for c, (slug, _, plural) in CATEGORIES.items() if counts[c])
+    (out / "llms.txt").write_text(f"""# vibecodedapps.dev
+
+> A curated list of {len(apps)} real, live apps, games and tools built with vibe coding (AI-assisted development with tools like Claude Code, Cursor and Lovable). Every link is checked automatically each week{f", most recently on {checked.isoformat()}" if checked else ""}.
+
+The site is generated from README.md in the Awesome Vibecoded Apps repository on GitHub, which is the single source of truth. Each entry is a name, a link and a one-sentence description, grouped by platform or type.
+
+## Pages
+
+- [All apps]({SITE}/): every entry, alphabetical
+{categories}
+
+## Data
+
+- [apps.json]({SITE}/apps.json): every entry as JSON (name, url, description, category, link_status)
+- [Source list]({REPO_URL}): the README the site is built from
+
+## Submitting an app
+
+- Submissions are GitHub pull requests that add one line to README.md; there is no submission API.
+- Entries must meet the [inclusion criteria]({REPO_URL}/blob/main/CONTRIBUTING.md#inclusion-criteria): live for 30+ days, AI involvement stated publicly, used by someone besides the author.
+- AI agents submitting for a user: follow the [instructions for AI agents]({AGENTS_URL}).
+""", encoding="utf-8")
 
 
 def main():
@@ -368,6 +422,7 @@ def main():
     (out / "CNAME").write_text("vibecodedapps.dev\n")
     (out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY)
     (out / ".nojekyll").write_text("")
+    write_machine_readable(out, entries, failing, checked)
     shutil.copy(HERE / "style.css", out / "style.css")
     (out / "favicon.svg").write_text(
         glyph("vibecodedapps.dev", 32).replace('class="glyph"', 'xmlns="http://www.w3.org/2000/svg" fill="#3a33d6"'))

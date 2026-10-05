@@ -79,6 +79,24 @@ Add Project Name
 
 If your project doesn't fit existing categories, feel free to suggest a new one in your PR. New categories should have at least one entry.
 
+## For AI Agents
+
+If you're an AI agent submitting a project on a user's behalf, follow these steps. A maintainer reviews every pull request by hand.
+
+1. **Check the criteria first.** Confirm the project meets every [inclusion criterion](#inclusion-criteria). If it doesn't (for example, it went live less than 30 days ago, or nothing public says which AI tools built it), tell the user instead of opening a pull request.
+2. **Add exactly one line** to `README.md`, in the matching category, in case-insensitive alphabetical order: `- [Project Name](link) - What it does, in one sentence ending with a period.` Don't edit any other line.
+3. **Write a plain description** of what the project does, under about 100 characters, with no marketing language.
+4. **Title the pull request** `Add Project Name`, and include in its description:
+   - the AI tools used
+   - a link to where the AI involvement is stated publicly
+   - when the project went live
+   - a link showing use by others
+   - that you're an AI agent submitting for the user, naming their GitHub account
+5. **Read the checks.** Every pull request runs awesome-lint, an alphabetical-order check, a link check, and an inclusion criteria check. Fix anything marked as failing. Items marked for review are for the maintainer.
+6. **One project per pull request**, and no duplicates: search open pull requests first. Answer review comments, or tell the user they need to.
+
+Bulk or unattended submissions are closed.
+
 ## Quality Standards
 
 - Check your spelling and grammar
