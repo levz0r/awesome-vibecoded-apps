@@ -4,7 +4,7 @@
 
 Vibe coding is an AI-assisted development approach [coined by Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383) in February 2025, where developers describe what they want in natural language and collaborate with AI tools like Claude, GPT, Cursor, or GitHub Copilot to generate and refine code. The term captures the intuitive, conversational flow of building software with AI as a creative partner.
 
-Every link is checked automatically each week, and broken entries are fixed or removed.
+Every link is checked automatically each week, and broken entries are fixed or removed. The current list is always at vibecodedapps.dev.
 
 ## Contents
 
