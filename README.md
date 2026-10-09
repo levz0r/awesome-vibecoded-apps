@@ -59,6 +59,7 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [Beatseek](https://beatseek.io) - A unified music search tool with advanced filtering across multiple streaming platforms.
 - [bidboard.games](https://bidboard.games) - A pay-to-rank leaderboard for game sites, ranked by how much each has paid.
 - [braincell.lol](https://braincell.lol) - An AI with 1,000,000 braincells that only knows what strangers paid it to know.
+- [BuiltByVibe](https://builtbyvibe.dev) - A community directory for discovering and syndicating apps built with AI coding tools.
 - [CarbScan](https://carbscan.ai) - AI-powered carb counting app to help manage diabetes and blood glucose levels.
 - [CourtSync Calendar](https://www.courtsynccalendar.com) - Extract court dates and deadlines from PDF scheduling orders into calendar files.
 - [CrossCanon](https://www.crosscanon.com) - Semantic search across the full text of the Bible.
