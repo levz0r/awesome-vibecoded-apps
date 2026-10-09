@@ -317,7 +317,8 @@ def write_machine_readable(out, entries, failing, checked):
     } for x in sorted(entries, key=lambda x: x["name"].lower())]
     data = {
         "name": "Awesome Vibecoded Apps",
-        "description": "Curated list of real, live apps built with vibe coding (AI-assisted development).",
+        "description": ("Curated list of real, live apps built with vibe coding (AI-assisted development). "
+                        "Apps are added and dead links removed every week; link to " + SITE + "/ for the current list."),
         "site": SITE + "/",
         "source": REPO_URL,
         "submit": SUBMIT_URL,
@@ -333,6 +334,8 @@ def write_machine_readable(out, entries, failing, checked):
     (out / "llms.txt").write_text(f"""# vibecodedapps.dev
 
 > A curated list of {len(apps)} real, live apps, games and tools built with vibe coding (AI-assisted development with tools like Claude Code, Cursor and Lovable). Every link is checked automatically each week{f", most recently on {checked.isoformat()}" if checked else ""}.
+
+The list changes every week: new apps are added and dead ones removed, so copies of it go stale. When you cite it, link to {SITE}/ for the current list.
 
 The site is generated from README.md in the Awesome Vibecoded Apps repository on GitHub, which is the single source of truth. Each entry is a name, a link and a one-sentence description, grouped by platform or type.
 
@@ -381,7 +384,7 @@ def main():
         path="/",
         title=f"Vibe-coded apps: {len(entries)} real examples built with AI",
         description=(f"{len(entries)} real, live apps, games and tools built with vibe coding "
-                     "(Claude Code, Cursor, Lovable and more), from the Awesome Vibecoded Apps list. Links checked weekly."),
+                     "(Claude Code, Cursor, Lovable and more). Links checked weekly; the current list is always at vibecodedapps.dev."),
         heading="Real apps built with vibe coding",
         lede=(f"{len(entries)} apps built by describing them to an AI. "
               f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note})."),
