@@ -104,17 +104,32 @@ Every link is checked automatically each week, and broken entries are fixed or r
 
 ## Games
 
+- [A Game About Capybaras Delivering Food](https://capybara-vibejam26.leocoout.dev) - Cozy open-world deliveries where the fruit stacks into a wobbling tower, Vibe Jam 2026 winner built with Claude Code.
+- [Almost Surgery](https://almostsurgery.ragim.dev) - A grim surgery simulator where you saw, cut, and electrocute for money, built with Codex.
+- [BeetleJump](https://beetlejump.com) - A punishing vertical climbing platformer, built with Claude Code.
 - [Cowboy Shooter](https://cowboy.raymelon.com) - A 3D runner shooting game in the Wild West, 100% AI-generated from assets to code.
 - [DOOMscroll](https://gisnep.com/doomscroll) - A DOOM-inspired browser game where the only mechanic is scrolling, with real NYT headlines.
+- [Eyrie](https://playeyrie.com) - Drop-in co-op wave-based roguelike about catching spirits and defending a shrine, built with Claude Code.
+- [Fanto's Mega-Mart](https://fantos-megamart.vercel.app) - Rocket-speed shopping in a haunted grocery store, Vibe Jam 2026 second place built with Codex.
 - [Feudle](https://feudlegame.com) - A daily Family Feud and Wordle mashup, made with ChatGPT by a non-developer.
 - [Fly](https://fly.pieter.com) - A multiplayer MMO flight sim with combat, 100% made with AI.
+- [FULL SEND](https://fullsend.game) - A 2D racer that loads in two seconds, built with Cursor.
+- [HALDANE-4](https://haldane4.denisbondare.com) - A short ASCII horror story about a solo descent beneath the Antarctic ice, built with Cursor.
 - [Jigsaw Haiku](https://jigsawhaiku.com) - A daily jigsaw puzzle that reveals a haiku, coded entirely by Claude.
+- [Kanso](https://www.kansogame.com) - Grow living digital bonsai trees in calm scenes, built with Codex and Claude.
+- [KÖTTBULLAR METAL](https://kottbullar-metal.vercel.app) - Survive a mosh pit where IKEA product names are the death metal lyrics, built with Claude Code.
+- [Missile Command](https://missile-command-game.centminmod.com) - A browser remake of the Atari classic, built initially with Gemini 2.5 Pro.
+- [Null Range](https://nullrange.com) - Multiplayer first-person space dogfighting, built with Cursor.
 - [Pixel Pokemon](https://github.com/0xClouds/pixel_pokemon) - A browser-based pixel art Pokemon game built with Next.js and TypeScript.
+- [Swingers](https://swing.offmylawn.com) - Swing through a city with friends to see who causes the most damage, built with Claude Code.
 - [The Great Taxi Assignment](https://great-taxi-assignment.netlify.app) - A retro 3D taxi sim that won 1st place at the 2025 Vibe Coding Game Jam.
+- [Tiny Skies](https://tinyskies.vercel.app) - Explore a tiny world before a looming apocalypse, built with Cursor.
 - [Tower of Time](https://github.com/maciej-trebacz/tower-of-time-game) - A tower defense game with time-rewind mechanics, ~95% of the codebase written by AI.
+- [Undersphere](https://playundersphere.com) - Multiplayer FPS inside a spherical world with shifting gravity, built with Cursor.
 - [Vector Tango](https://www.vector-tango.com) - Low-poly air traffic control game with aerial combat and multiplayer.
 - [Vibe Sail](https://vibesail.com) - A relaxing multiplayer 3D sailing simulator with exploration and cargo missions.
 - [Vibeware](https://vibeware.vercel.app) - Fast-paced microgame collection where you play as a bot learning the web.
+- [WenWare](https://wen-ware.com) - Guess the place and year of immersive 360-degree historical scenes, Vibe Jam 2026 third place built with Codex.
 
 ## Browser Extensions
 
