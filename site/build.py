@@ -85,7 +85,7 @@ def github_json(path):
     if not token or not repo:
         return None
     req = urllib.request.Request(
-        f"https://api.github.com/repos/{repo}" + (f"/{path}" if path else ""),
+        f"https://api.github.com/repos/{repo}/{path}",
         headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
     )
     try:
@@ -96,16 +96,13 @@ def github_json(path):
         return None
 
 
-def star_count():
-    """Stargazers of the list repo, or None when the API isn't available (local builds)."""
-    return (github_json("") or {}).get("stargazers_count")
+STAR_BADGE = "https://img.shields.io/github/stars/levz0r/awesome-vibecoded-apps?style=social&label=Star"
 
 
 def star_badge(event):
-    """GitHub-style star button linking to the repo, with the count from build time."""
-    count = f'<span class="star-badge__count">{STARS}</span>' if STARS else ""
-    return (f'<a class="star-badge" href="{REPO_URL}" data-goatcounter-click="star/{event}" '
-            f'title="Star the list on GitHub"><span class="star-badge__label">★<span class="star-badge__word"> Star</span></span>{count}</a>')
+    """shields.io star badge linking to the repo; the count is live (shields caches it briefly)."""
+    return (f'<a class="star-badge" href="{REPO_URL}" data-goatcounter-click="star/{event}" title="Star the list on GitHub">'
+            f'<img src="{STAR_BADGE}" alt="Star the list on GitHub" height="20"></a>')
 
 
 def link_status():
@@ -311,7 +308,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 
 FOOTER = ""  # filled in main() from the README
-STARS = None  # filled in main() with the repo's star count
 
 
 AGENTS_URL = f"{REPO_URL}/blob/main/CONTRIBUTING.md#for-ai-agents"
@@ -371,14 +367,13 @@ The site is generated from README.md in the Awesome Vibecoded Apps repository on
 
 
 def main():
-    global FOOTER, STARS
+    global FOOTER
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", default=str(ROOT / "_site"))
     out = Path(parser.parse_args().out)
 
     intro, footnote, entries = parse_readme((ROOT / "README.md").read_text(encoding="utf-8"))
     checked, failing = link_status()
-    STARS = star_count()
     live = sum(1 for x in entries if x["url"].rstrip("/") not in failing)
     when = f'{checked:%b} {checked.day}, {checked.year}' if checked else None
     check_note = (f'<time datetime="{checked.isoformat()}">{when}</time>' if checked else "every week")
