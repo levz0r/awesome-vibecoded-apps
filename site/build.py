@@ -380,7 +380,7 @@ def main():
 
     FOOTER = f"""<p>{inline_md(intro[1] if len(intro) > 1 else intro[0])}</p>
   <p>{inline_md(footnote)}</p>
-  <p>This site is generated from the <a href="{REPO_URL}">Awesome Vibecoded Apps</a> list on GitHub. Every link is checked automatically each week. Built something with AI? <a href="{SUBMIT_URL}">Submit it</a>, or <a href="{REPO_URL}">star the list</a>.</p>"""
+  <p>This site is generated from the <a href="{REPO_URL}">Awesome Vibecoded Apps</a> list on GitHub. Every link is checked automatically each week. Built something with AI? <a href="{SUBMIT_URL}">Submit it</a>. Like the list? {star_badge("footer")}</p>"""
 
     if out.exists():
         shutil.rmtree(out)
