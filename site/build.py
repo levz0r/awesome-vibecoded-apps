@@ -264,7 +264,7 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 THESIS: Every shipped vibe-coded app is one dense numbered line, read the way developers read the front page each morning; refuses the dark AI-directory card grid.
 OWN-WORLD: Warm grey ground, near-black ink, one fully committed ultramarine nav band, one small Verdana-lineage text size, hairline rules, a 5x5 glyph per app, drawn live ticks.
 STORY: The visitor sees real shipped apps immediately, trusts they are live (checked weekly), opens a few, and makers find Submit in the band.
-FIRST VIEWPORT: Ultramarine band (site name left, category links, submit right); one-line lede with count and last check date; numbered rows begin above the fold.
+FIRST VIEWPORT: Ultramarine band (site name left, category links, star and submit right); one-line lede with count and last check date; numbered rows begin above the fold.
 FORM: The Show List, grounded candidate 5 of 7, seed key 925c97e8.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
@@ -273,7 +273,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <nav class="band__inner" aria-label="Categories">
     <a class="home" href="/"{' aria-current="page"' if current == "" else ""}>{glyph("vibecodedapps.dev", 13)}vibecodedapps.dev</a>
     <span class="cats">{nav}</span>
-    <span class="actions"><a href="{REPO_URL}">GitHub</a> <a class="submit" href="{SUBMIT_URL}">submit</a></span>
+    <span class="actions"><a class="star" href="{REPO_URL}" data-goatcounter-click="star/band" title="Star the list on GitHub">★ Star</a> <a class="submit" href="{SUBMIT_URL}">submit</a></span>
   </nav>
 </header>
 <main class="sheet">
@@ -387,7 +387,8 @@ def main():
                      "(Claude Code, Cursor, Lovable and more). Links checked weekly; the current list is always at vibecodedapps.dev."),
         heading="Real apps built with vibe coding",
         lede=(f"{len(entries)} apps built by describing them to an AI. "
-              f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note})."),
+              f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note}). "
+              f'Useful? <a href="{REPO_URL}" data-goatcounter-click="star/lede">Star the list on GitHub</a> so others find it.'),
         entries=everything, failing=failing, current="", show_category=True, og=cards["index"],
     ), encoding="utf-8")
 

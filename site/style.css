@@ -85,6 +85,8 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-r
 .band .cats { display: contents; }
 .band .actions { margin-left: auto; display: inline-flex; gap: 14px; }
 .band .submit { color: var(--band-ink); font-weight: bold; text-decoration: underline; }
+.band .star { color: var(--band-ink); white-space: nowrap; }
+.lede a { color: var(--ink); }
 
 /* The sheet */
 .sheet { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
