@@ -122,7 +122,7 @@ One saturated voice (ultramarine) on a warm, low-chroma neutral ground; all othe
 - **Near-Black Ink** (`near-black-ink`): all primary text, app names, footer links.
 - **Meta Grey** (`meta-grey`): row numbers, domains, the lede, meta lines, footer prose.
 - **Hairline** (`hairline`): the 1px rules above the list and under every row; scrollbar thumb.
-- **Band Ink** (`band-ink`) and **Band Lilac** (`band-lilac`): text inside the band. Lilac is the resting link colour; white is hover, current page, the home name, and submit.
+- **Band Ink** (`band-ink`) and **Band Lilac** (`band-lilac`): text inside the band. Lilac is the resting link colour; white is hover, current page, the home name, the star link, and submit.
 - **Select Lilac** (`select-lilac`): `::selection` and the `:target` row highlight in light mode.
 - **Night set** (`night-*`): the dark-scheme replacements for ground, ink, meta, visited, hairline, glyph, live and failing. The band colour and band text are identical in both schemes.
 
@@ -154,13 +154,13 @@ One saturated voice (ultramarine) on a warm, low-chroma neutral ground; all othe
 
 ## Layout
 
-A single centred column, max 1120px, with a 16px side gutter; the band's inner row uses the same max width so band and list share left and right edges. The band is a wrapping flex row: home name, category links, then GitHub and submit pushed right with `margin-left: auto`.
+A single centred column, max 1120px, with a 16px side gutter; the band's inner row uses the same max width so band and list share left and right edges. The band is a wrapping flex row: home name, category links, then the star badge and submit pushed right with `margin-left: auto`. The star badge is the shields.io GitHub social badge (`style=social&label=Star`, 20px tall), loaded as an image and linked to the repo; it is the one third-party image on the page and the only element not drawn from the site's tokens. The home lede ends with one sentence that carries the same badge, and the footer's last line ends with it too. Each fires its own GoatCounter event (`star/band`, `star/lede`, `star/footer`). Band gaps are 10px, with 12px between badge and submit.
 
 Each entry is a three-column grid: a right-aligned number column (2.6em), a 15px glyph column, and the body, with a 10px column gap and 7px/6px vertical padding between hairlines. The body holds two lines: title line (name, domain in parens, description), then meta line (category link on the index, a mid-dot separator, status).
 
 Vertical rhythm is tight and fixed: 22px above the heading, 2px under it, 14px under the lede, 18px above and 40px below the footer.
 
-At 560px and below: the number column narrows to 2em and the gap to 8px; the band padding drops to 6px 12px, and the band reorders so the home name and GitHub/submit share the first line and category links wrap underneath. Nothing else changes; there is no hamburger and no hidden navigation.
+At 560px and below: the number column narrows to 2em and the gap to 8px; the band padding drops to 6px 12px, and the band reorders so the home name and star/submit share the first line and category links wrap underneath. Nothing else changes; there is no hamburger and no hidden navigation.
 
 ## Elevation & Depth
 

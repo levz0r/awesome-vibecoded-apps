@@ -74,17 +74,20 @@ a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-r
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 2px 12px;
+  gap: 2px 10px;
 }
 
 .band a { color: var(--band-meta); text-decoration: none; }
 .band a:hover, .band a[aria-current="page"] { color: var(--band-ink); text-decoration: underline; }
 .band a:focus-visible { outline-color: var(--band-ink); }
-.band .home { color: var(--band-ink); font-weight: bold; margin-right: 10px; display: inline-flex; align-items: center; gap: 6px; }
+.band .home { color: var(--band-ink); font-weight: bold; margin-right: 6px; display: inline-flex; align-items: center; gap: 6px; }
 .band .home .glyph { fill: var(--band-ink); align-self: center; }
 .band .cats { display: contents; }
-.band .actions { margin-left: auto; display: inline-flex; gap: 14px; }
+.band .actions { margin-left: auto; display: inline-flex; align-items: center; gap: 12px; }
 .band .submit { color: var(--band-ink); font-weight: bold; text-decoration: underline; }
+
+.star-badge { display: inline-block; line-height: 0; vertical-align: middle; }
+.star-badge img { display: block; height: 20px; width: auto; }
 
 /* The sheet */
 .sheet { max-width: 1120px; margin: 0 auto; padding: 0 16px; }

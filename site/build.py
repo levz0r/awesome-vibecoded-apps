@@ -96,6 +96,15 @@ def github_json(path):
         return None
 
 
+STAR_BADGE = "https://img.shields.io/github/stars/levz0r/awesome-vibecoded-apps?style=social&label=Star"
+
+
+def star_badge(event):
+    """shields.io star badge linking to the repo; the count is live (shields caches it briefly)."""
+    return (f'<a class="star-badge" href="{REPO_URL}" data-goatcounter-click="star/{event}" title="Star the list on GitHub">'
+            f'<img src="{STAR_BADGE}" alt="Star the list on GitHub" height="20"></a>')
+
+
 def link_status():
     """Return (date of last link check on main or None, set of failing URLs)."""
     runs = github_json("actions/workflows/links.yml/runs?branch=main&status=success&per_page=1")
@@ -264,7 +273,7 @@ def page(*, path, title, description, heading, lede, entries, failing, current, 
 THESIS: Every shipped vibe-coded app is one dense numbered line, read the way developers read the front page each morning; refuses the dark AI-directory card grid.
 OWN-WORLD: Warm grey ground, near-black ink, one fully committed ultramarine nav band, one small Verdana-lineage text size, hairline rules, a 5x5 glyph per app, drawn live ticks.
 STORY: The visitor sees real shipped apps immediately, trusts they are live (checked weekly), opens a few, and makers find Submit in the band.
-FIRST VIEWPORT: Ultramarine band (site name left, category links, submit right); one-line lede with count and last check date; numbered rows begin above the fold.
+FIRST VIEWPORT: Ultramarine band (site name left, category links, star and submit right); one-line lede with count and last check date; numbered rows begin above the fold.
 FORM: The Show List, grounded candidate 5 of 7, seed key 925c97e8.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
@@ -273,7 +282,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <nav class="band__inner" aria-label="Categories">
     <a class="home" href="/"{' aria-current="page"' if current == "" else ""}>{glyph("vibecodedapps.dev", 13)}vibecodedapps.dev</a>
     <span class="cats">{nav}</span>
-    <span class="actions"><a href="{REPO_URL}">GitHub</a> <a class="submit" href="{SUBMIT_URL}">submit</a></span>
+    <span class="actions">{star_badge("band")} <a class="submit" href="{SUBMIT_URL}">submit</a></span>
   </nav>
 </header>
 <main class="sheet">
@@ -371,7 +380,7 @@ def main():
 
     FOOTER = f"""<p>{inline_md(intro[1] if len(intro) > 1 else intro[0])}</p>
   <p>{inline_md(footnote)}</p>
-  <p>This site is generated from the <a href="{REPO_URL}">Awesome Vibecoded Apps</a> list on GitHub. Every link is checked automatically each week. Built something with AI? <a href="{SUBMIT_URL}">Submit it</a>, or <a href="{REPO_URL}">star the list</a>.</p>"""
+  <p>This site is generated from the <a href="{REPO_URL}">Awesome Vibecoded Apps</a> list on GitHub. Every link is checked automatically each week. Built something with AI? <a href="{SUBMIT_URL}">Submit it</a>. Like the list? {star_badge("footer")}</p>"""
 
     if out.exists():
         shutil.rmtree(out)
@@ -387,7 +396,8 @@ def main():
                      "(Claude Code, Cursor, Lovable and more). Links checked weekly; the current list is always at vibecodedapps.dev."),
         heading="Real apps built with vibe coding",
         lede=(f"{len(entries)} apps built by describing them to an AI. "
-              f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note})."),
+              f"{f'All {live}' if live == len(entries) else f'{live} of {len(entries)}'} live at the last check ({check_note}). "
+              f'Useful? {star_badge("lede")} on GitHub so others find it.'),
         entries=everything, failing=failing, current="", show_category=True, og=cards["index"],
     ), encoding="utf-8")
 
