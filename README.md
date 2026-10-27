@@ -83,14 +83,12 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [Nora AI](https://noratutor.xyz) - AI tutoring app with video conversations, transcriptions, and study plans.
 - [Paddles.ai](https://www.paddles.ai) - Track and analyze your pickleball matches with AI-powered insights.
 - [Plinq](https://plinq.com.br) - A women's safety platform providing instant access to public criminal records to help prevent violence.
-- [PrintPigeon](https://printpigeon.co.uk) - Upload a PDF, enter an address, and have it printed and mailed, built in 3 days with Lovable.
 - [Refetch](https://refetch.io) - An open-source alternative to Hacker News for exploring tech discussions and news.
 - [Spikelog](https://spikelog.com) - Simple metrics charts for scripts, cron jobs, and MVPs, built in a day with Cursor.
 - [Standup Buddy](https://standup-buddy.lovable.app) - Randomize your team's standup order with a simple click.
 - [Stories of Life](https://stories-of-life.vercel.app) - Generate personalized bedtime stories based on your child's emotions.
 - [TikZ Editor](https://tikz.dev/editor/) - A WYSIWYG editor for LaTeX TikZ figures, built almost entirely by Codex.
 - [Time Tracker](https://time.wisdemic.com) - Simple and clean time tracking for productivity.
-- [TrendFeed](https://www.trendfeed.app) - AI platform that turns trending news into short-form video content.
 - [Uncurl.dev](https://uncurl.dev) - Turn curl commands into shareable links that anyone can run.
 - [vibecodedapps.dev](https://vibecodedapps.dev) - A browsable index of this list with one page per category, built with Claude Code.
 
