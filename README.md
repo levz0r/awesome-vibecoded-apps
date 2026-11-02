@@ -35,7 +35,6 @@ Every link is checked automatically each week, and broken entries are fixed or r
 
 ### Android
 
-- [Crashy Zorg](https://play.google.com/store/apps/details?id=com.blobware.crashyzorg) - An arcade-style space game with sound effects and music, fully AI-coded with no manually written code.
 - [Movie & TV Swiper](https://play.google.com/store/apps/details?id=com.blazingbanana.movieandtvapplication) - Tinder-like swipe interface for choosing what to watch next.
 - [RallyMesh](https://play.google.com/store/apps/details?id=com.blazingbanana.rallymesh) - Bluetooth mesh communication app for off-grid messaging.
 
