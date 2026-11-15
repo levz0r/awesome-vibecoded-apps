@@ -112,6 +112,7 @@ Every link is checked automatically each week, and broken entries are fixed or r
 - [Fly](https://fly.pieter.com) - A multiplayer MMO flight sim with combat, 100% made with AI.
 - [FULL SEND](https://fullsend.game) - A 2D racer that loads in two seconds, built with Cursor.
 - [HALDANE-4](https://haldane4.denisbondare.com) - A short ASCII horror story about a solo descent beneath the Antarctic ice, built with Cursor.
+- [Harness Hollow](https://github.com/KrasimirKralev/harvest-hollow) - Cozy 3D co-op farming game for two in the browser, built with Claude Code.
 - [Jigsaw Haiku](https://jigsawhaiku.com) - A daily jigsaw puzzle that reveals a haiku, coded entirely by Claude.
 - [Kanso](https://www.kansogame.com) - Grow living digital bonsai trees in calm scenes, built with Codex and Claude.
 - [KÖTTBULLAR METAL](https://kottbullar-metal.vercel.app) - Survive a mosh pit where IKEA product names are the death metal lyrics, built with Claude Code.
